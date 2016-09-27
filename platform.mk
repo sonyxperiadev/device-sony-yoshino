@@ -60,6 +60,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml
 
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    device/sony/yoshino/overlay
+
 # Platform Init
 PRODUCT_PACKAGES += \
     fstab.yoshino \
