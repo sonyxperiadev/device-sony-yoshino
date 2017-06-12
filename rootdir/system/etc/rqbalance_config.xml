@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Copyright (C) 2017 AngeloGioacchino Del Regno <kholk11@gmail.com>        -->
+<!--                                                                          -->
+<!-- Licensed under the Apache License, Version 2.0 (the "License");          -->
+<!-- you may not use this file except in compliance with the License.         -->
+<!-- You may obtain a copy of the License at                                  -->
+<!--                                                                          -->
+<!--      http://www.apache.org/licenses/LICENSE-2.0                          -->
+<!--                                                                          -->
+<!-- Unless required by applicable law or agreed to in writing, software      -->
+<!-- distributed under the License is distributed on an "AS IS" BASIS,        -->
+<!-- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. -->
+<!-- See the License for the specific language governing permissions and      -->
+<!-- limitations under the License.                                           -->
+
+<rqbalance_config>
+
+    <batterysave>
+        <cpuquiet min_cpus="1" max_cpus="3"/>
+        <rqbalance balance_level="80"/>
+        <rqbalance down_thresholds="0 120 320 400 440 500 550 700"/>
+        <rqbalance   up_thresholds="200 450 550 580 600 640 750 4294967295"/>
+    </batterysave>
+
+    <balanced>
+        <cpuquiet min_cpus="2" max_cpus="8"/>
+        <rqbalance balance_level="40"/>
+        <rqbalance down_thresholds="0 70 200 280 330 450 515 585"/>
+        <rqbalance   up_thresholds="100 300 380 400 500 575 625 4294967295"/>
+    </balanced>
+
+    <performance>
+        <cpuquiet min_cpus="8" max_cpus="8"/>
+        <rqbalance balance_level="40"/>
+        <rqbalance down_thresholds="0 70 200 280 330 450 515 585"/>
+        <rqbalance   up_thresholds="100 300 380 400 500 575 625 4294967295"/>
+    </performance>
+
+    <video_decoding>
+        <cpuquiet min_cpus="2" max_cpus="4"/>
+        <rqbalance balance_level="40"/>
+        <rqbalance down_thresholds="0 70 200 280 330 450 515 585"/>
+        <rqbalance   up_thresholds="100 300 380 400 500 575 625 4294967295"/>
+    </video_decoding>
+
+    <video_encoding>
+        <cpuquiet min_cpus="3" max_cpus="4"/>
+        <rqbalance balance_level="60"/>
+        <rqbalance down_thresholds="0 70 200 280 330 450 515 585"/>
+        <rqbalance   up_thresholds="100 300 380 400 500 575 625 4294967295"/>
+    </video_encoding>
+
+</rqbalance_config>
+
