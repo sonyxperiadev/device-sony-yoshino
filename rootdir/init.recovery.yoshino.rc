@@ -1,0 +1,9 @@
+import init.common.usb.rc
+
+on fs
+    symlink /dev/block/platform/soc/1da4000.ufshc /dev/block/bootdevice
+    setprop sys.usb.controller 6a00000.dwc3
+
+on boot
+    setprop sys.usb.config adb
+
