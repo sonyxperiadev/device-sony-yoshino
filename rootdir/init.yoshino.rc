@@ -31,6 +31,7 @@ on fs
 
     # USB controller setup - required to kickstart ConfigFS
     setprop sys.usb.controller a800000.dwc3
+
 on boot
 
     # Bluetooth
