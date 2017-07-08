@@ -91,7 +91,7 @@ BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_USES_HWC2 := true
 
-# FPC verstion select
+# FPC version select
 TARGET_FPC_VERSION := N
 
 include device/sony/common/CommonConfig.mk
