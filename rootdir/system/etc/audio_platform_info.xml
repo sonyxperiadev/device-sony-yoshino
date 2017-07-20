@@ -31,15 +31,21 @@
         <device name="SND_DEVICE_IN_VOICE_REC_DMIC_FLUENCE" acdb_id="132"/>
         <!-- Custom mapping starts here -->
         <device name="SND_DEVICE_OUT_HEADPHONES" acdb_id="10"/>
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER" acdb_id="101"/>
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER_2" acdb_id="150"/>
         <device name="SND_DEVICE_OUT_VOICE_HANDSET" acdb_id="7"/>
         <device name="SND_DEVICE_OUT_VOICE_HEADPHONES" acdb_id="10"/>
+        <device name="SND_DEVICE_OUT_VOICE_LINE" acdb_id="47"/>
         <device name="SND_DEVICE_IN_CAMCORDER_MIC" acdb_id="544"/>
         <device name="SND_DEVICE_IN_HANDSET_MIC" acdb_id="6"/>
         <device name="SND_DEVICE_IN_HANDSET_DMIC" acdb_id="4"/>
         <device name="SND_DEVICE_IN_HEADSET_MIC" acdb_id="528"/>
         <device name="SND_DEVICE_IN_VOICE_HEADSET_MIC" acdb_id="8"/>
+        <device name="SND_DEVICE_IN_VOICE_SPEAKER_MIC" acdb_id="11"/>
+        <device name="SND_DEVICE_IN_VOICE_SPEAKER_DMIC" acdb_id="11"/>
+        <device name="SND_DEVICE_IN_VOICE_SPEAKER_QMIC" acdb_id="11"/>
         <device name="SND_DEVICE_IN_VOICE_REC_MIC" acdb_id="-1"/>
-        <device name="SND_DEVICE_IN_VOICE_DMIC" acdb_id="4" />
+        <device name="SND_DEVICE_IN_VOICE_DMIC" acdb_id="6" />
         <device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK" acdb_id="102"/>
         <!-- Custom mapping ends here -->
     </acdb_ids>
