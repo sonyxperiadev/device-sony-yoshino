@@ -114,6 +114,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.a4wp=false \
     ro.bluetooth.emb_wp_mode=true \
     ro.bluetooth.wipower=true
+    
+# Fluence
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.qc.sdk.audio.fluencetype=fluencepro
 
 # aDSP sensors
 ## max rate
