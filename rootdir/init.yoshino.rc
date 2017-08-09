@@ -16,6 +16,9 @@ import init.common.rc
 import init.common.usb.rc
 import init.yoshino.pwr.rc
 
+on init
+    write /sys/block/zram0/max_comp_streams 8
+
 on fs
     symlink /dev/block/platform/soc/1da4000.ufshc /dev/block/bootdevice
 
