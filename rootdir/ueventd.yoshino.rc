@@ -144,6 +144,7 @@
 /dev/btpower                                0660 bluetooth net_bt_stack
 /dev/rfkill                                 0660 bluetooth net_bt_stack
 /dev/ttyHS0                                 0660 bluetooth net_bt_stack
+/dev/ttyMSM0                                0660 bluetooth net_bt_stack
 
 # NFC
 /dev/pn54x                                             0660 nfc nfc
