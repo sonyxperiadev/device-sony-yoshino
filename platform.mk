@@ -110,10 +110,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # QCOM Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    qcom.bluetooth.soc=cherokee \
-    ro.bluetooth.a4wp=false \
-    ro.bluetooth.emb_wp_mode=true \
-    ro.bluetooth.wipower=true
+    qcom.bluetooth.soc=cherokee
 
 # aDSP sensors
 ## max rate
