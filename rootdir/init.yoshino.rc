@@ -31,9 +31,6 @@ on fs
     write /sys/kernel/boot_slpi/boot 1
     write /dev/ipa 1
 
-    # USB controller setup - required to kickstart ConfigFS
-    setprop sys.usb.controller a800000.dwc3
-
 on boot
     # Bluetooth
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
