@@ -159,3 +159,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.pug=false \
     ro.qti.sensors.iod=false \
     ro.qfusion_use_report_period=false
+
+# USB controller setup
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.usb.controller=8a00000.dwc3
