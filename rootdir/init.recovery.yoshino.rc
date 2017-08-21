@@ -1,6 +1,6 @@
 import init.common.usb.rc
 
-on fs
+on init
     symlink /dev/block/platform/soc/1da4000.ufshc /dev/block/bootdevice
     setprop sys.usb.controller 8a00000.dwc3
 
