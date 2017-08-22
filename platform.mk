@@ -162,4 +162,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # USB controller setup
 PRODUCT_PROPERTY_OVERRIDES += \
-    sys.usb.controller=8a00000.dwc3
+    sys.usb.controller=a800000.dwc3
