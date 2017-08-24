@@ -4,13 +4,13 @@
 /dev/ion                  0664   system     system
 /dev/rtc0                 0660   system     system
 /dev/smd0                 0660   system     system
-/dev/smd3                 0660   bluetooth  net_bt_stack
-/dev/smd2                 0660   bluetooth  net_bt_stack
+/dev/smd3                 0660   bluetooth  bluetooth
+/dev/smd2                 0660   bluetooth  bluetooth
 /dev/smd4                 0660   system     system
 /dev/smd_cxm_qmi          0640   radio      radio
 /dev/smd5                 0660   system     system
 /dev/smd6                 0660   system     system
-/dev/smd7                 0660   bluetooth  net_bt_stack
+/dev/smd7                 0660   bluetooth  bluetooth
 /dev/ipa                  0660   system     net_admin
 /dev/wwan_ioctl           0660   system     net_admin
 /dev/ipaNatTable          0660   net_admin  net_admin
@@ -141,10 +141,10 @@
 
 # BT
 /dev/hidraw*                                0666 system    system
-/dev/btpower                                0660 bluetooth net_bt_stack
-/dev/rfkill                                 0660 bluetooth net_bt_stack
-/dev/ttyHS0                                 0660 bluetooth net_bt_stack
-/dev/ttyMSM0                                0660 bluetooth net_bt_stack
+/dev/btpower                                0660 bluetooth bluetooth
+/dev/rfkill                                 0660 bluetooth bluetooth
+/dev/ttyHS0                                 0660 bluetooth bluetooth
+/dev/ttyMSM0                                0660 bluetooth bluetooth
 
 # NFC
 /dev/pn54x                                             0660 nfc nfc
