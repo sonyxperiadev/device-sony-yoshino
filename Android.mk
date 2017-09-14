@@ -1,4 +1,4 @@
-ifeq ($(filter-out maple,$(TARGET_DEVICE)),)
+ifeq ($(filter-out yoshino,$(PRODUCT_PLATFORM)),)
 
 LOCAL_PATH := $(call my-dir)
 

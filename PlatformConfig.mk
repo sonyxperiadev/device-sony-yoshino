@@ -15,7 +15,6 @@
 # Platform path
 PLATFORM_COMMON_PATH := device/sony/yoshino
 
-PRODUCT_PLATFORM := yoshino
 TARGET_BOARD_PLATFORM := msm8998
 TARGET_KERNEL_VERSION := 4.4
 
