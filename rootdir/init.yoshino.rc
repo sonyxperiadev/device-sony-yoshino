@@ -29,6 +29,9 @@ on fs
     write /dev/ipa 1
 
 on boot
+    # WLAN MAC
+    chown wifi wifi /sys/module/wlan/parameters/fwpath
+
     # Bluetooth
     chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
     chmod 0660 /sys/class/rfkill/rfkill0/state
