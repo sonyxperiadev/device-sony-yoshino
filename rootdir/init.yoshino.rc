@@ -32,18 +32,12 @@ on fs
     write /dev/ipa 1
 
 on boot
+    # WLAN MAC
+    chown wifi wifi /sys/module/wlan/parameters/fwpath
+
     # Bluetooth
-    chown bluetooth net_bt /sys/class/rfkill/rfkill0/state
-    chmod 0660 /sys/class/rfkill/rfkill0/state
-
-    chown bluetooth net_bt /sys/class/rfkill/rfkill0/type
-    chmod 0660 /sys/class/rfkill/rfkill0/type
-
-    chown bluetooth net_bt /sys/class/rfkill/rfkill0/device/extldo
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/device/extldo
     chmod 0660 /sys/class/rfkill/rfkill0/device/extldo
-
-    chown bluetooth bluetooth /proc/bluetooth/sleep/proto
-    chmod 0660 /proc/bluetooth/sleep/proto
 
     # Cover mode
     chown system system /sys/devices/virtual/input/clearpad/cover_mode_enabled

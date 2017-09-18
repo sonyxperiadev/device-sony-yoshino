@@ -29,7 +29,7 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/audio_platform_info_i2s.xml:system/etc/audio_platform_info_i2s.xml \
     $(SONY_ROOT)/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
     $(SONY_ROOT)/system/etc/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    $(SONY_ROOT)/system/etc/media_profiles.xml:system/etc/media_profiles.xml
+    $(SONY_ROOT)/system/etc/media_profiles_V1_0.xml:system/vendor/etc/media_profiles_V1_0.xml
 
 # Qualcom WiFi
 PRODUCT_COPY_FILES += \
