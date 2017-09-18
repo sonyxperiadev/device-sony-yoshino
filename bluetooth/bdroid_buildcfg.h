@@ -30,6 +30,14 @@ static inline const char* getBTDefaultName()
         return "Xperia XZ Premium";
     }
 
+    if (!strcmp("poplar", device)) {
+        return "Xperia XZ1";
+    }
+
+    if (!strcmp("lilac", device)) {
+        return "Xperia XZ1 Compact";
+    }
+
     return "Xperia";
 }
 
