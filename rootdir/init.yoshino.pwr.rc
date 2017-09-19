@@ -147,16 +147,12 @@ on boot
     write /proc/sys/kernel/sched_freq_dec_notify 50000
 
     # disallow upmigrate for cgroup's tasks
-    write /dev/cpuctl/bg_non_interactive/cpu.upmigrate_discourage 1
+    write /dev/cpuctl/cpu.upmigrate_discourage 1
 
     #enable sched colocation and colocation inheritance
     write /proc/sys/kernel/sched_upmigrate 130
     write /proc/sys/kernel/sched_downmigrate 110
     write /proc/sys/kernel/sched_enable_thread_grouping 1
-
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/sampling_rate
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/sampling_down_factor
-    chown system system /sys/devices/system/cpu/cpufreq/ondemand/io_is_busy
 
     # set cpu_boost parameters
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1324800"
