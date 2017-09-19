@@ -43,6 +43,7 @@
         <device name="SND_DEVICE_OUT_VOICE_HANDSET" acdb_id="7"/>
         <device name="SND_DEVICE_OUT_VOICE_HEADPHONES" acdb_id="10"/>
 
+        <device name="SND_DEVICE_IN_CAMCORDER_MIC" acdb_id="544"/>
         <device name="SND_DEVICE_IN_HANDSET_MIC" acdb_id="6"/>
         <device name="SND_DEVICE_IN_HANDSET_DMIC" acdb_id="4"/>
         <device name="SND_DEVICE_IN_HEADSET_MIC" acdb_id="528"/>
