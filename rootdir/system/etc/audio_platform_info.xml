@@ -39,7 +39,7 @@
         <device name="SND_DEVICE_OUT_SONY_VOICE_TTY_HCO_SPEAKER" acdb_id="150"/>
 
         <!-- Custom mapping starts here -->
-        <device name="SND_DEVICE_OUT_HEADPHONES" acdb_id="-1"/>
+        <device name="SND_DEVICE_OUT_HEADPHONES" acdb_id="10"/>
         <device name="SND_DEVICE_OUT_VOICE_HANDSET" acdb_id="7"/>
         <device name="SND_DEVICE_OUT_VOICE_HEADPHONES" acdb_id="10"/>
 
