@@ -1,4 +1,4 @@
-ifeq ($(filter-out yoshino,$(PRODUCT_PLATFORM)),)
+ifeq (yoshino,$(PRODUCT_PLATFORM))
 
 LOCAL_PATH := $(call my-dir)
 
