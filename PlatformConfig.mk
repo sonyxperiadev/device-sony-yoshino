@@ -89,4 +89,7 @@ CAMERA_DAEMON_NOT_PRESENT := true
 # FPC version select
 TARGET_FPC_VERSION := N
 
+# init_sony
+BOARD_USES_INIT_SONY := true
+
 include device/sony/common/CommonConfig.mk
