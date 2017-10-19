@@ -17,9 +17,10 @@ import init.common.srv.rc
 import init.common.usb.rc
 import init.yoshino.pwr.rc
 
-on fs
+on init
     symlink /dev/block/platform/soc/1da4000.ufshc /dev/block/bootdevice
 
+on fs
     mount_all ./fstab.yoshino
     swapon_all ./fstab.yoshino
 
