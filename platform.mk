@@ -141,6 +141,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.wrist_tilt=false \
     ro.qti.sensors.pug=false \
     ro.qti.sensors.iod=false \
+    ro.qti.sensors.als_scale=1000 \
     ro.qfusion_use_report_period=false
 
 # USB controller setup
