@@ -78,6 +78,9 @@ TARGET_PER_MGR_ENABLED := true
 
 # SELinux
 BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
+ifneq (,$(filter userdebug eng,$(TARGET_BUILD_VARIANT)))
+BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform-userdebug
+endif
 
 # Display
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
