@@ -43,5 +43,8 @@
 /dev/block/platform/soc/1da4000\.ufshc/by-name/persist         u:object_r:persist_block_device:s0
 /dev/block/bootdevice/by-name/persist                          u:object_r:persist_block_device:s0
 
+/dev/block/platform/soc/1da4000\.ufshc/by-name/rdimage         u:object_r:rdimage_block_device:s0
+/dev/block/bootdevice/by-name/rdimage                          u:object_r:rdimage_block_device:s0
+
 /dev/block/zram0                                               u:object_r:swap_block_device:s0
 
