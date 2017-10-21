@@ -1,0 +1,7 @@
+type rdclean, domain;
+type rdclean_exec, exec_type, file_type;
+
+init_daemon_domain(rdclean);
+
+allow rdclean rdimage_block_device:blk_file rw_file_perms;
+allow rdclean { shell_exec toolbox_exec }:file rx_file_perms;

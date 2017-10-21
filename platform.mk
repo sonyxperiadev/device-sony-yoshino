@@ -65,7 +65,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Platform Init
 PRODUCT_PACKAGES += \
     fstab.yoshino \
-    init.yoshino.pwr
+    init.yoshino.pwr \
+    rdclean.sh
 
 # Audio
 PRODUCT_PACKAGES += \

@@ -1,0 +1,10 @@
+##########################
+# Devices
+#
+/dev/block/platform/soc/1da4000\.ufshc/by-name/rdimage         u:object_r:rdimage_block_device:s0
+/dev/block/bootdevice/by-name/rdimage                          u:object_r:rdimage_block_device:s0
+
+#############################
+# System files
+#
+/(vendor|system/vendor)/bin/rdclean.sh                         u:object_r:rdclean_exec:s0
