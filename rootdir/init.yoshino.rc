@@ -25,6 +25,11 @@ on fs
     mount_all ./fstab.yoshino
     swapon_all ./fstab.yoshino
 
+    # /dsp is initially unlabelled so we need to mount
+    # it as rw, restore AOSP labels, then remount
+    restorecon_recursive /dsp
+    mount rootfs rootfs /dsp ro remount
+
     restorecon_recursive /persist
 
     write /sys/kernel/boot_adsp/boot 1
