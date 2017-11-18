@@ -89,7 +89,7 @@ on boot
 service macaddrsetup /system/vendor/bin/macaddrsetup /data/misc/wifi/wlan_mac.bin
     class core
     user system
-    group system bluetooth
+    group system bluetooth wifi
     disabled
     oneshot
     writepid /dev/cpuset/system-background/tasks
