@@ -161,12 +161,7 @@
 /sys/class/leds/lcd-backlight/brightness                                                                                     0664 system system
 
 # Fingerprint sensor  device
-/sys/devices/soc/soc:fpc1145 hw_reset         0220 system input
-/sys/devices/soc/soc:fpc1145 pinctl_set       0220 system input
-/sys/devices/soc/soc:fpc1145 regulator_enable 0220 system input
-/sys/devices/soc/soc:fpc1145 spi_prepare      0220 system input
-/sys/devices/soc/soc:fpc1145 irq              0660 system input
-/sys/devices/soc/soc:fpc1145 wakeup_enable    0220 system input
+/dev/fingerprint         0664 system input
 
 # Framebuffer for Dynamic Resolution Switch
 /sys/devices/virtual/graphics/fb0/mode        0664 system graphics
