@@ -119,7 +119,7 @@ service tftp_server /odm/bin/tftp_server
 service pd_mapper /odm/bin/pd-mapper
      class core
 
-service start_hci_filter /odm/bin/wcnss_filter
+service hci_filter /odm/bin/wcnss_filter
     class late_start
     user bluetooth
     group bluetooth system wakelock
@@ -139,7 +139,7 @@ on property:sys.boot_completed=1
     write /sys/kernel/boot_wlan/boot_wlan 1
 
 on property:wc_transport.start_hci=true
-    start start_hci_filter
+    start hci_filter
 
 on property:wc_transport.start_hci=false
-    stop start_hci_filter
+    stop hci_filter
