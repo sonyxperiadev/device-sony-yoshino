@@ -32,15 +32,9 @@ on fs
 
     restorecon_recursive /persist
 
-    start qseecomd
-
     write /sys/kernel/boot_adsp/boot 1
     write /sys/kernel/boot_slpi/boot 1
     write /dev/ipa 1
-
-on late-fs
-    # Wait qseecomd started
-    wait_for_prop sys.listeners.registered true
 
 on boot
     # WLAN MAC
