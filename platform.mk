@@ -147,3 +147,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.controller=a800000.dwc3 \
     sys.usb.rndis.func.name=gsi
+
+# Camera Rotation
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.lib2d.rotation=on
