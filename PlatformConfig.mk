@@ -82,9 +82,6 @@ BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 # Display
 TARGET_HAS_HDR_DISPLAY := true
 
-# Camera
-CAMERA_DAEMON_NOT_PRESENT := true
-
 # FPC version select
 TARGET_FPC_VERSION := N
 
