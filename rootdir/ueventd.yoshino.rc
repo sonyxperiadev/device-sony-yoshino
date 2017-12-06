@@ -4,13 +4,13 @@
 /dev/ion                  0664   system     system
 /dev/rtc0                 0660   system     system
 /dev/smd0                 0660   system     system
-/dev/smd3                 0660   bluetooth  net_bt_stack
-/dev/smd2                 0660   bluetooth  net_bt_stack
+/dev/smd3                 0660   bluetooth  bluetooth
+/dev/smd2                 0660   bluetooth  bluetooth
 /dev/smd4                 0660   system     system
 /dev/smd_cxm_qmi          0640   radio      radio
 /dev/smd5                 0660   system     system
 /dev/smd6                 0660   system     system
-/dev/smd7                 0660   bluetooth  net_bt_stack
+/dev/smd7                 0660   bluetooth  bluetooth
 /dev/ipa                  0660   system     net_admin
 /dev/wwan_ioctl           0660   system     net_admin
 /dev/ipaNatTable          0660   net_admin  net_admin
@@ -19,9 +19,6 @@
 
 #permissions for CSVT
 /dev/smd11                0660   radio      radio
-
-#permsissions for BT/FM
-/dev/btpower              0660   bluetooth  system
 
 #permissions for pta
 /dev/pta                  0660   system     system
@@ -89,8 +86,9 @@
 /dev/msm_audio_cal        0660   system     audio
 /dev/msm_hweffects        0660   system     audio
 /dev/msm_amrnb            0660   system     audio
-/dev/msm_amrnb_in         0640   system     audio
 /dev/msm_amrwb            0660   system     audio
+/dev/msm_amrnb_in         0660   system     audio
+/dev/msm_amrwb_in         0660   system     audio
 /dev/msm_amrwbplus        0660   system     audio
 /dev/msm_cad              0660   system     audio
 /dev/msm_camera/*         0660   system     camera
@@ -141,9 +139,10 @@
 
 # BT
 /dev/hidraw*                                0666 system    system
-/dev/btpower                                0660 bluetooth net_bt_stack
-/dev/rfkill                                 0660 bluetooth net_bt_stack
-/dev/ttyHS0                                 0660 bluetooth net_bt_stack
+/dev/btpower                                0660 bluetooth bluetooth
+/dev/rfkill                                 0660 bluetooth bluetooth
+/dev/ttyHS0                                 0660 bluetooth bluetooth
+/dev/ttyMSM0                                0660 bluetooth bluetooth
 
 # NFC
 /dev/pn54x                                             0660 nfc nfc
@@ -155,20 +154,15 @@
 
 # LED
 /sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d000/leds/led:* max_brightness 0664 system system
-/sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d000/leds/led:* brightness 0664 system system
-/sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d300/leds/led:* max_brightness 0664 system system
-/sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d300/leds/led:* brightness 0664 system system
-/sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d300/leds/led:* blink 0664 system system
-/sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d800/leds/wled max_brightness 0664 system system
-/sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d800/leds/wled brightness 0664 system system
+/sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d000/leds/led:* brightness     0664 system system
+/sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d000/leds/led:* blink          0664 system system
+/sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d800/leds/wled  max_brightness 0664 system system
+/sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d800/leds/wled  brightness     0664 system system
+/sys/class/leds/lcd-backlight/max_brightness                                                                                 0644 root system
+/sys/class/leds/lcd-backlight/brightness                                                                                     0664 system system
 
 # Fingerprint sensor  device
-/sys/devices/soc/soc:fpc1145 hw_reset         0220 system input
-/sys/devices/soc/soc:fpc1145 pinctl_set       0220 system input
-/sys/devices/soc/soc:fpc1145 regulator_enable 0220 system input
-/sys/devices/soc/soc:fpc1145 spi_prepare      0220 system input
-/sys/devices/soc/soc:fpc1145 irq              0660 system input
-/sys/devices/soc/soc:fpc1145 wakeup_enable    0220 system input
+/dev/fingerprint         0664 system input
 
 # Framebuffer for Dynamic Resolution Switch
 /sys/devices/virtual/graphics/fb0/mode        0664 system graphics

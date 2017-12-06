@@ -1,0 +1,36 @@
+genfscon sysfs /bus/esoc/devices                                        u:object_r:sysfs_msm_subsys:s0
+
+genfscon sysfs /devices/soc/c179000.i2c                                 u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/soc/c17a000.i2c                                 u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/soc/c1b5000.i2c                                 u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/soc/c1b6000.i2c                                 u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/soc/5000000.qcom,kgsl-3d0                       u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/soc/17300000.qcom,lpass                         u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/soc/c900000.qcom,mdss_mdp                       u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/soc/c900000.qcom,mdss_rotator                   u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/soc/4080000.qcom,mss                            u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi                           u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/soc/1d0101c.qcom,spss                           u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/soc/5c00000.qcom,ssc                            u:object_r:sysfs_msm_subsys:s0
+genfscon sysfs /devices/soc/cce0000.qcom,venus                          u:object_r:sysfs_msm_subsys:s0
+
+genfscon sysfs /devices/soc/ca0c000.qcom,cci                            u:object_r:sysfs_camera:s0
+genfscon sysfs /devices/soc/caa4000.qcom,fd                             u:object_r:sysfs_camera:s0
+genfscon sysfs /devices/soc/ca1c000.qcom,jpeg                           u:object_r:sysfs_camera:s0
+genfscon sysfs /devices/soc/caa0000.qcom,jpeg                           u:object_r:sysfs_camera:s0
+genfscon sysfs /devices/soc/8c0000.qcom,msm-cam                         u:object_r:sysfs_camera:s0
+
+genfscon sysfs /devices/soc/1da4000.ufshc/clkscale_enable               u:object_r:sysfs_clkscale:s0
+genfscon sysfs /devices/soc/c900000.qcom,mdss_mdp/caps                  u:object_r:sysfs_mdss_mdp_caps:s0
+genfscon sysfs /devices/soc/a1800000.qcom,rmtfs_rtel_sharedmem          u:object_r:sysfs_rmtfs:s0
+
+genfscon sysfs /devices/soc/soc:fpc1145                                 u:object_r:sysfs_fingerprint:s0
+
+genfscon sysfs /devices/soc/c900000.qcom,mdss_mdp/c900000.qcom,mdss_mdp:qcom,mdss_fb_primary/leds                     u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d000/leds    u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d300/leds    u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d800/leds    u:object_r:sysfs_leds:s0
+
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qpnp,fg/power_supply/bms                        u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qpnp,fg/power_supply/bms/capacity               u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/power_supply/battery/capacity    u:object_r:sysfs_batteryinfo:s0

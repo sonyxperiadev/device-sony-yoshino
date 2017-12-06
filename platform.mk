@@ -26,10 +26,9 @@ SONY_ROOT := $(PLATFORM_COMMON_PATH)/rootdir
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
     $(SONY_ROOT)/system/etc/audio_platform_info.xml:system/etc/audio_platform_info.xml \
-    $(SONY_ROOT)/system/etc/audio_platform_info_i2s.xml:system/etc/audio_platform_info_i2s.xml \
     $(SONY_ROOT)/system/etc/media_codecs.xml:system/etc/media_codecs.xml \
     $(SONY_ROOT)/system/etc/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
-    $(SONY_ROOT)/system/etc/media_profiles.xml:system/etc/media_profiles.xml
+    $(SONY_ROOT)/system/etc/media_profiles_V1_0.xml:system/vendor/etc/media_profiles_V1_0.xml
 
 # Qualcom WiFi
 PRODUCT_COPY_FILES += \
@@ -57,9 +56,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml \
     frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:system/etc/permissions/android.hardware.vulkan.level.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:system/etc/permissions/android.hardware.vulkan.version.xml \
-    frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml \
-    frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
-    frameworks/native/data/etc/com.nxp.mifare.xml:system/etc/permissions/com.nxp.mifare.xml
+    frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -69,12 +66,6 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     fstab.yoshino \
     init.yoshino.pwr
-
-# NFC packages
-PRODUCT_PACKAGES += \
-    com.android.nfc_extras \
-    NfcNci \
-    Tag
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -99,25 +90,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     keystore.msm8998
 
-# RILD
-PRODUCT_PROPERTY_OVERRIDES += \
-    rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-    ril.subscription.types=NV,RUIM
-
 # OpenGLES Nougat version
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610
 
 # QCOM Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    qcom.bluetooth.soc=cherokee \
-    ro.bluetooth.a4wp=false \
-    ro.bluetooth.emb_wp_mode=true \
-    ro.bluetooth.wipower=true
+    qcom.bluetooth.soc=cherokee
     
 # Fluence
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qc.sdk.audio.fluencetype=fluencepro
+    ro.qc.sdk.audio.fluencetype=fluence
 
 # aDSP sensors
 ## max rate
@@ -162,4 +145,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.wrist_tilt=false \
     ro.qti.sensors.pug=false \
     ro.qti.sensors.iod=false \
+    ro.qti.sensors.als_scale=1000 \
     ro.qfusion_use_report_period=false
+
+# USB controller setup
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.usb.controller=a800000.dwc3 \
+    sys.usb.rndis.func.name=gsi
