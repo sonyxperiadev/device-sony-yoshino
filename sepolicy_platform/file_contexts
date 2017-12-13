@@ -50,3 +50,7 @@
 /dev/block/bootdevice/by-name/oem                              u:object_r:system_block_device:s0
 
 /dev/block/zram0                                               u:object_r:swap_block_device:s0
+
+##################################
+# FBE
+/system/bin/init.qti.qseecomd.sh                               u:object_r:init-qti-fbe-sh_exec:s0
