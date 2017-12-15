@@ -156,3 +156,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Camera Rotation
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.lib2d.rotation=on
+
+# verity
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.verified_boot.xml:system/etc/permissions/android.software.verified_boot.xml
+
+# setup dm-verity configs.
+PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/1da4000.ufshc/by-name/system
+$(call inherit-product, build/target/product/verity.mk)

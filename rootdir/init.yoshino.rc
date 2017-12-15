@@ -18,6 +18,9 @@ import init.common.usb.rc
 import init.yoshino.pwr.rc
 
 on init
+    # Load persistent dm-verity state
+    verity_load_state
+
     write /sys/block/zram0/max_comp_streams 8
 
 on fs
@@ -34,6 +37,10 @@ on fs
     write /sys/kernel/boot_adsp/boot 1
     write /sys/kernel/boot_slpi/boot 1
     write /dev/ipa 1
+
+on early-boot
+    # Update dm-verity state and set partition.*.verified properties
+    verity_update_state
 
 on boot
     # WLAN MAC
