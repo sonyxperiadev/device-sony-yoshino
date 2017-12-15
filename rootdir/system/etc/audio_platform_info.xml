@@ -26,7 +26,7 @@
 <!-- IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                          -->
 <audio_platform_info>
     <acdb_ids>
-        <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="124"/>
+        <device name="SND_DEVICE_OUT_SPEAKER" acdb_id="15"/>
         <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED" acdb_id="124"/>
         <device name="SND_DEVICE_IN_VOICE_REC_DMIC_FLUENCE" acdb_id="132"/>
         <!-- Custom mapping starts here -->
@@ -47,10 +47,6 @@
         <device name="SND_DEVICE_IN_VOICE_REC_MIC" acdb_id="-1"/>
         <device name="SND_DEVICE_IN_VOICE_DMIC" acdb_id="6" />
         <device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK" acdb_id="102"/>
-        <device name="SND_DEVICE_OUT_VOICE_SPEAKER" acdb_id="150"/>
-        <device name="SND_DEVICE_IN_SPEAKER_DMIC_AEC_NS" acdb_id="578"/>
-        <device name="SND_DEVICE_IN_HANDSET_DMIC_AEC_NS" acdb_id="577"/>
-        <device name="SND_DEVICE_IN_HEADSET_MIC_AEC" acdb_id="579"/>
         <!-- Custom mapping ends here -->
     </acdb_ids>
     <bit_width_configs>
@@ -95,16 +91,15 @@
         <gain_level_map db="0" level="1"/>
     </gain_db_to_level_mapping>
     <backend_names>
-        <device name="SND_DEVICE_OUT_HEADPHONES" backend="headphones" interface="SLIMBUS_0_RX"/>
+        <device name="SND_DEVICE_OUT_HEADPHONES" backend="headphones" interface="SLIMBUS_6_RX"/>
         <device name="SND_DEVICE_OUT_BT_SCO_WB" backend="bt-sco-wb" interface="SLIMBUS_7_RX"/>
         <device name="SND_DEVICE_OUT_BT_SCO" backend="bt-sco" interface="SLIMBUS_7_RX"/>
-        <device name="SND_DEVICE_OUT_LINE" backend="headphones" interface="SLIMBUS_0_RX"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" backend="speaker-and-headphones" interface="SLIMBUS_0_RX-and-SLIMBUS_0_RX"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_AND_LINE" backend="speaker-and-headphones" interface="SLIMBUS_0_RX-and-SLIMBUS_0_RX"/>
-        <device name="SND_DEVICE_OUT_VOICE_HEADPHONES" backend="headphones" interface="SLIMBUS_0_RX"/>
-        <device name="SND_DEVICE_OUT_VOICE_LINE" backend="headphones" interface="SLIMBUS_0_RX"/>
-        <device name="SND_DEVICE_OUT_VOICE_TTY_FULL_HEADPHONES" backend="headphones" interface="SLIMBUS_0_RX"/>
-        <device name="SND_DEVICE_OUT_VOICE_TTY_VCO_HEADPHONES" backend="headphones" interface="SLIMBUS_0_RX"/>
-        <device name="SND_DEVICE_IN_CAMCORDER_MIC" interface="SLIMBUS_0_TX"/>
+        <device name="SND_DEVICE_OUT_LINE" backend="headphones" interface="SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" backend="speaker-and-headphones" interface="SLIMBUS_0_RX-and-SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_LINE" backend="speaker-and-headphones" interface="SLIMBUS_0_RX-and-SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_HEADPHONES" backend="headphones" interface="SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_LINE" backend="headphones" interface="SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_TTY_FULL_HEADPHONES" backend="headphones" interface="SLIMBUS_6_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_TTY_VCO_HEADPHONES" backend="headphones" interface="SLIMBUS_6_RX"/>
     </backend_names>
 </audio_platform_info>
