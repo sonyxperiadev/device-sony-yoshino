@@ -22,7 +22,6 @@ on init
 
 on fs
     mount_all ./fstab.yoshino
-    swapon_all ./fstab.yoshino
 
     # /dsp is initially unlabelled so we need to mount
     # it as rw, restore AOSP labels, then remount
@@ -134,6 +133,9 @@ on property:vold.post_fs_data_done=1
     start macaddrsetup
 
 on property:sys.boot_completed=1
+    # Enable ZRAM on boot_complete
+    swapon_all ./fstab.yoshino
+
     # Start the WiFi only after secure services are up
     write /sys/kernel/boot_wlan/boot_wlan 1
 
