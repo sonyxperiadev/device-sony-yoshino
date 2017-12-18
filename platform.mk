@@ -43,6 +43,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
+# FBE support
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/system/bin/init.qti.qseecomd.sh:system/bin/init.qti.qseecomd.sh
+
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/msm_irqbalance.conf:system/etc/msm_irqbalance.conf
