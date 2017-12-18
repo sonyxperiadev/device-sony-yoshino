@@ -87,7 +87,7 @@ on boot
     write /dev/cpuset/system-background/cpus 0-1
 
 # OSS WLAN and BT MAC setup
-service macaddrsetup /system/vendor/bin/macaddrsetup /data/misc/wifi/wlan_mac.bin
+service macaddrsetup /vendor/bin/macaddrsetup /data/misc/wifi/wlan_mac.bin
     class core
     user system
     group system bluetooth wifi
@@ -95,7 +95,7 @@ service macaddrsetup /system/vendor/bin/macaddrsetup /data/misc/wifi/wlan_mac.bi
     oneshot
     writepid /dev/cpuset/system-background/tasks
 
-service wpa_supplicant /system/vendor/bin/hw/wpa_supplicant \
+service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
     -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf \
     -I/system/etc/wifi/wpa_supplicant_overlay.conf \
     -e/data/misc/wifi/entropy.bin -g@android:wpa_wlan0
