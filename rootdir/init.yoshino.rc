@@ -71,15 +71,6 @@ on boot
     chown system system /sys/devices/soc/fpc1145_device/irq
     chmod 0660 /sys/devices/soc/fpc1145_device/irq
 
-    # add a cpuset for the camera daemon
-    # we want all the little cores for camera
-    mkdir /dev/cpuset/camera-daemon
-    write /dev/cpuset/camera-daemon/cpus 0
-    write /dev/cpuset/camera-daemon/mems 0
-    chown system system /dev/cpuset/camera-daemon
-    chown system system /dev/cpuset/camera-daemon/tasks
-    chmod 0664 /dev/cpuset/camera-daemon/tasks
-
     # update foreground cpuset now that processors are up
     write /dev/cpuset/foreground/cpus 0-7
     write /dev/cpuset/foreground/boost/cpus 0-7
