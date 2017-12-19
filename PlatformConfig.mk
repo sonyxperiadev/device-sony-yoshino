@@ -86,4 +86,7 @@ TARGET_HAS_HDR_DISPLAY := true
 # FPC version select
 TARGET_FPC_VERSION := N
 
+# Platform witout a vendor partition
+TARGET_COPY_OUT_VENDOR := system/vendor
+
 include device/sony/common/CommonConfig.mk
