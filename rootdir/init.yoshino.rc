@@ -21,8 +21,6 @@ on init
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
-    write /sys/block/zram0/max_comp_streams 8
-
 on boot
     # WLAN MAC
     chown wifi wifi /sys/module/wlan/parameters/fwpath
