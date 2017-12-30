@@ -59,6 +59,7 @@ WIFI_DRIVER_FW_PATH_AP  := "ap"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+TARGET_USES_ICNSS_QMI := true
 
 # BT definitions for Qualcomm solution
 BOARD_HAVE_BLUETOOTH := true
