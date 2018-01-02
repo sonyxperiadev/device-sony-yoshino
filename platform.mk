@@ -38,9 +38,9 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(SONY_ROOT)/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf
 
-# IDC
+# Touch IDC
 PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/system/usr/idc/clearpad.idc:system/usr/idc/clearpad.idc
+    $(SONY_ROOT)/vendor/usr/idc/clearpad.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/clearpad.idc
 
 # Keylayout
 PRODUCT_COPY_FILES += \
