@@ -67,7 +67,7 @@ $(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /persist/hlos_rfs/share
 $(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /firmware rfs/msm/slpi/readonly/firmware && popd > /dev/null)
 $(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /odm/firmware rfs/msm/slpi/readonly/vendor/firmware && popd > /dev/null)
 
-$(shell mkdir -p $(PRODUCT_OUT)/system/etc/firmware/wlan/qca_cld)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /odm/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini etc/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini && popd > /dev/null)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /odm/firmware/wlan/qca_cld/bdwlan.bin etc/firmware/wlan/qca_cld/bdwlan.bin && popd > /dev/null)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /data/misc/wifi/wlan_mac.bin etc/firmware/wlan/qca_cld/wlan_mac.bin && popd > /dev/null)
+$(shell mkdir -p $(PRODUCT_OUT)/vendor/firmware/wlan/qca_cld)
+$(shell pushd $(PRODUCT_OUT)/vendor > /dev/null && ln -s /odm/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini etc/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini && popd > /dev/null)
+$(shell pushd $(PRODUCT_OUT)/vendor > /dev/null && ln -s /odm/firmware/wlan/qca_cld/bdwlan.bin etc/firmware/wlan/qca_cld/bdwlan.bin && popd > /dev/null)
+$(shell pushd $(PRODUCT_OUT)/vendor > /dev/null && ln -s /data/misc/wifi/wlan_mac.bin etc/firmware/wlan/qca_cld/wlan_mac.bin && popd > /dev/null)
