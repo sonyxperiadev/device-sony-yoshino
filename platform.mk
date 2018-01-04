@@ -22,6 +22,10 @@ SOMC_PLATFORM := yoshino
 
 SONY_ROOT := $(PLATFORM_COMMON_PATH)/rootdir
 
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(PLATFORM_COMMON_PATH)/overlay
+
 # Media
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
@@ -58,13 +62,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_0_3.xml:system/etc/permissions/android.hardware.vulkan.version.xml \
     frameworks/native/data/etc/android.hardware.sensor.barometer.xml:system/etc/permissions/android.hardware.sensor.barometer.xml
 
-# Overlay
-DEVICE_PACKAGE_OVERLAYS += \
-    $(PLATFORM_COMMON_PATH)/overlay
-
-# Platform Init
+# Platform power  configuration
 PRODUCT_PACKAGES += \
-    fstab.yoshino \
     init.yoshino.pwr
 
 # Audio
