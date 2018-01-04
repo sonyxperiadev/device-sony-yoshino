@@ -41,28 +41,3 @@ include $(BUILD_PREBUILT)
 
 $(shell mkdir -p $(PRODUCT_OUT)/root)
 $(shell pushd $(PRODUCT_OUT)/root > /dev/null && ln -s fstab.yoshino fstab.$(TARGET_DEVICE) && popd > /dev/null)
-
-$(shell mkdir -p $(PRODUCT_OUT)/system/rfs/msm/mpss/readonly/vendor)
-$(shell mkdir -p $(PRODUCT_OUT)/system/rfs/msm/adsp/readonly/vendor)
-$(shell mkdir -p $(PRODUCT_OUT)/system/rfs/msm/slpi/readonly/vendor)
-
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /data/tombstones/modem rfs/msm/mpss/ramdumps && popd > /dev/null)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /persist/rfs/msm/mpss rfs/msm/mpss/readwrite && popd > /dev/null)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /persist/rfs/shared rfs/msm/mpss/shared && popd > /dev/null)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /persist/hlos_rfs/shared rfs/msm/mpss/hlos && popd > /dev/null)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /firmware rfs/msm/mpss/readonly/firmware && popd > /dev/null)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /odm/firmware rfs/msm/mpss/readonly/vendor/firmware && popd > /dev/null)
-
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /data/tombstones/lpass rfs/msm/adsp/ramdumps && popd > /dev/null)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /persist/rfs/msm/adsp rfs/msm/adsp/readwrite && popd > /dev/null)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /persist/rfs/shared rfs/msm/adsp/shared && popd > /dev/null)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /persist/hlos_rfs/shared rfs/msm/adsp/hlos && popd > /dev/null)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /firmware rfs/msm/adsp/readonly/firmware && popd > /dev/null)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /odm/firmware rfs/msm/adsp/readonly/vendor/firmware && popd > /dev/null)
-
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /data/tombstones/lpass rfs/msm/slpi/ramdumps && popd > /dev/null)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /persist/rfs/msm/slpi rfs/msm/slpi/readwrite && popd > /dev/null)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /persist/rfs/shared rfs/msm/slpi/shared && popd > /dev/null)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /persist/hlos_rfs/shared rfs/msm/slpi/hlos && popd > /dev/null)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /firmware rfs/msm/slpi/readonly/firmware && popd > /dev/null)
-$(shell pushd $(PRODUCT_OUT)/system > /dev/null && ln -s /odm/firmware rfs/msm/slpi/readonly/vendor/firmware && popd > /dev/null)
