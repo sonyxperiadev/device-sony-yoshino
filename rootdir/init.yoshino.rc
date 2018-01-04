@@ -56,12 +56,6 @@ service tftp_server /odm/bin/tftp_server
 service pd_mapper /odm/bin/pd-mapper
      class core
 
-service hci_filter /odm/bin/wcnss_filter
-    class late_start
-    user bluetooth
-    group bluetooth system wakelock
-    disabled
-
 service cnss-daemon /odm/bin/cnss-daemon -n -l
     class late_start
     user system
@@ -70,9 +64,3 @@ service cnss-daemon /odm/bin/cnss-daemon -n -l
 on property:sys.boot_completed=1
     # Start the WiFi only after secure services are up
     write /sys/kernel/boot_wlan/boot_wlan 1
-
-on property:wc_transport.start_hci=true
-    start hci_filter
-
-on property:wc_transport.start_hci=false
-    stop hci_filter
