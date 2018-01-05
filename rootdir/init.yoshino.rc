@@ -35,18 +35,6 @@ service macaddrsetup /vendor/bin/macaddrsetup /data/misc/wifi/wlan_mac.bin
     oneshot
     writepid /dev/cpuset/system-background/tasks
 
-service tftp_server /odm/bin/tftp_server
-   class core
-   user root
-
-service pd_mapper /odm/bin/pd-mapper
-     class core
-
-service cnss-daemon /odm/bin/cnss-daemon -n -l
-    class late_start
-    user system
-    group system inet net_admin wifi
-
 on property:sys.boot_completed=1
     # Start the WiFi only after secure services are up
     write /sys/kernel/boot_wlan/boot_wlan 1
