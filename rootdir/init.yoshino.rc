@@ -18,11 +18,14 @@ import init.common.usb.rc
 import init.yoshino.pwr.rc
 
 on init
+    # Load persistent dm-verity state
+    verity_load_state
+
     write /sys/block/zram0/max_comp_streams 8
 
 on fs
-    mount_all ./fstab.yoshino
-    swapon_all ./fstab.yoshino
+    mount_all fstab.yoshino --early
+    swapon_all fstab.yoshino
 
     # /dsp is initially unlabelled so we need to mount
     # it as rw, restore AOSP labels, then remount
@@ -34,6 +37,17 @@ on fs
     write /sys/kernel/boot_adsp/boot 1
     write /sys/kernel/boot_slpi/boot 1
     write /dev/ipa 1
+
+on late-fs
+
+    start qseecomd
+    exec - root root root -- /system/bin/init.qti.qseecomd.sh
+
+    mount_all fstab.yoshino --late
+
+on early-boot
+    # Update dm-verity state and set partition.*.verified properties
+    verity_update_state
 
 on boot
     # WLAN MAC

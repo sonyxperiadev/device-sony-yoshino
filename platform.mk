@@ -47,6 +47,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/usr/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl
 
+# FBE support
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/system/bin/init.qti.qseecomd.sh:system/bin/init.qti.qseecomd.sh
+
 # MSM IRQ Balancer configuration file
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/system/etc/msm_irqbalance.conf:system/etc/msm_irqbalance.conf
@@ -155,3 +159,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Camera Rotation
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.lib2d.rotation=on
+
+# verity
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.verified_boot.xml:system/etc/permissions/android.software.verified_boot.xml
+
+# setup dm-verity configs.
+PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/1da4000.ufshc/by-name/system
+$(call inherit-product, build/target/product/verity.mk)
