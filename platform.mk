@@ -99,9 +99,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Fluence
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.qc.sdk.audio.fluencetype=fluence \
-    persist.audio.fluence.voicecall=true \
-    persist.audio.fluence.speaker=true
+    ro.qc.sdk.audio.fluencetype=fluence
 
 # aDSP sensors
 ## max rate
