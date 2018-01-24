@@ -26,15 +26,6 @@ on boot
     write /dev/cpuset/background/cpus 0
     write /dev/cpuset/system-background/cpus 0-1
 
-# OSS WLAN and BT MAC setup
-service macaddrsetup /vendor/bin/macaddrsetup /data/misc/wifi/wlan_mac.bin
-    class core
-    user system
-    group system bluetooth wifi
-    disabled
-    oneshot
-    writepid /dev/cpuset/system-background/tasks
-
 on property:sys.boot_completed=1
     # Start the WiFi only after secure services are up
     write /sys/kernel/boot_wlan/boot_wlan 1
