@@ -151,3 +151,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.controller=a800000.dwc3 \
     sys.usb.rndis.func.name=gsi
+
+#WiFi MAC address path
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.wifi.addr_path=/data/misc/wifi/wlan_mac.bin
