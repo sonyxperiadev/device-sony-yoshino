@@ -16,6 +16,14 @@ import init.common.rc
 import init.common.usb.rc
 import init.yoshino.pwr.rc
 
+on init
+    # Load persistent dm-verity state
+    verity_load_state
+
+on early-boot
+    # Update dm-verity state and set partition.*.verified properties
+    verity_update_state
+
 on boot
     # WLAN MAC
     chown wifi wifi /sys/module/wlan/parameters/fwpath
