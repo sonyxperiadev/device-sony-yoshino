@@ -162,3 +162,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Camera Rotation
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.lib2d.rotation=on
+
+#WiFi MAC address path
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.wifi.addr_path=/data/misc/wifi/wlan_mac.bin
