@@ -42,7 +42,7 @@ BOARD_KERNEL_CMDLINE += androidboot.bootdevice=1da4000.ufshc
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += display_status=on
 
-TARGET_RECOVERY_FSTAB = $(PLATFORM_COMMON_PATH)/rootdir/fstab.yoshino
+TARGET_RECOVERY_FSTAB = $(PLATFORM_COMMON_PATH)/rootdir/vendor/etc/fstab.yoshino
 
 TARGET_PD_SERVICE_ENABLED := true
 
