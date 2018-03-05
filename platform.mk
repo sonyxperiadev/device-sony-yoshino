@@ -89,10 +89,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     keystore.msm8998
 
-# OpenGLES Nougat version
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=196610
-
 # QCOM Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=cherokee
