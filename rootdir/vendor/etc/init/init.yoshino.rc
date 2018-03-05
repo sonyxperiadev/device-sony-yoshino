@@ -12,10 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import init.common.rc
-import init.common.usb.rc
-import init.yoshino.pwr.rc
-
 on boot
     # WLAN MAC
     chown wifi wifi /sys/module/wlan/parameters/fwpath
