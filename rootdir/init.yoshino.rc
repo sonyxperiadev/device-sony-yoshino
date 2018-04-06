@@ -24,6 +24,7 @@ on init
 on boot
     # WLAN MAC
     chown wifi wifi /sys/module/wlan/parameters/fwpath
+    chown wifi wifi /sys/kernel/boot_wlan/boot_wlan
 
     # update foreground cpuset now that processors are up
     write /dev/cpuset/foreground/cpus 0-7
@@ -85,10 +86,6 @@ service cnss-daemon /odm/bin/cnss-daemon -n -l
     class late_start
     user system
     group system inet net_admin wifi
-
-on property:sys.boot_completed=1
-    # Start the WiFi only after secure services are up
-    write /sys/kernel/boot_wlan/boot_wlan 1
 
 on property:wc_transport.start_hci=true
     start hci_filter
