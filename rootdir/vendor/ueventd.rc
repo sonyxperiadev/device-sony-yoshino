@@ -117,8 +117,6 @@
 /dev/voice_svc            0660   system     audio
 /dev/wcd_dsp0_control     0660   system     audio
 /dev/wcd-dsp-glink        0660   system     audio
-/dev/video32              0660   system     camera
-/dev/video33              0660   system     camera
 /sys/devices/virtual/smdpkt/smdcntl* open_timeout 0664 radio  radio
 
 # sensors
