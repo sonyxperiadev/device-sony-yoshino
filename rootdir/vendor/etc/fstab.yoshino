@@ -6,7 +6,7 @@
 /dev/block/bootdevice/by-name/oem          /odm         ext4    ro,barrier=1                                                  wait,recoveryonly
 /dev/block/bootdevice/by-name/vendor       /vendor      ext4    ro,barrier=1                                                  wait,recoveryonly
 /dev/block/bootdevice/by-name/cache        /cache       ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc,errors=panic wait,check,formattable
-/dev/block/bootdevice/by-name/userdata     /data        ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc,errors=panic wait,check,formattable,encryptable=footer
+/dev/block/bootdevice/by-name/userdata     /data        ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc,errors=panic wait,check,formattable,forceencrypt=footer
 /dev/block/bootdevice/by-name/boot         /boot        emmc    defaults                                                      defaults
 /dev/block/bootdevice/by-name/FOTAKernel   /recovery    emmc    defaults                                                      defaults
 /dev/block/bootdevice/by-name/frp          /persistent  emmc    defaults                                                      defaults
