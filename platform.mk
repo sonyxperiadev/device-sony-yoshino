@@ -153,3 +153,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #WiFi MAC address path
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.wifi.addr_path=/data/misc/wifi/wlan_mac.bin
+
+# setup dm-verity configs.
+PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/1da4000.ufshc/by-name/system
+$(call inherit-product, build/target/product/verity.mk)
