@@ -1,4 +1,4 @@
-ifeq (yoshino,$(PRODUCT_PLATFORM))
+ifeq (yoshino,$(TARGET_BOOTLOADER_BOARD_NAME))
 
 LOCAL_PATH := $(call my-dir)
 
