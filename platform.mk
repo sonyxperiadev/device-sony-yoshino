@@ -87,10 +87,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8998
 
-# Keymaster
-PRODUCT_PACKAGES += \
-    keystore.msm8998
-
 # QCOM Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=cherokee
