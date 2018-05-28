@@ -41,7 +41,6 @@ BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
 
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
-BOARD_KERNEL_CMDLINE += display_status=on
 
 TARGET_RECOVERY_FSTAB = $(PLATFORM_COMMON_PATH)/rootdir/vendor/etc/fstab.yoshino
 
