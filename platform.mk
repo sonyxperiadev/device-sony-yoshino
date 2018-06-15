@@ -34,10 +34,6 @@ PRODUCT_COPY_FILES += \
      frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
      frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
 
-# Init scripts
-PRODUCT_COPY_FILES += \
-    $(SONY_ROOT)/vendor/etc/init/init.yoshino.usb.charger.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.yoshino.usb.charger.rc \
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/audio_tuning_mixer_tasha.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer_tasha.txt \
