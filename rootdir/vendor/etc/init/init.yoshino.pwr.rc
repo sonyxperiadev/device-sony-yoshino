@@ -69,8 +69,8 @@ on property:sys.boot_completed=1
     write /proc/sys/kernel/sched_group_upmigrate 100
     write /proc/sys/kernel/sched_group_downmigrate 95
     write /proc/sys/kernel/sched_select_prev_cpu_us 0
-    write /proc/sys/kernel/sched_freq_inc_notify 400000
-    write /proc/sys/kernel/sched_freq_dec_notify 400000
+    write /proc/sys/kernel/sched_freq_inc_notify 77000
+    write /proc/sys/kernel/sched_freq_dec_notify 77000
     write /proc/sys/kernel/sched_spill_nr_run 5
     write /proc/sys/kernel/sched_restrict_cluster_spill 1
 
