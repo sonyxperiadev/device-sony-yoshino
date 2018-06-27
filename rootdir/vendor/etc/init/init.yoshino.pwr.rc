@@ -60,7 +60,7 @@ on charger
     # Enable thermal
     write /sys/module/msm_thermal/core_control/enabled 1
 
-on boot
+on property:sys.boot_completed=1
     # Apply Scheduler and Governor settings for 8998
     # HMP scheduler (big.Little cluster related) settings
     write /proc/sys/kernel/sched_migration_fixup 1
@@ -69,10 +69,11 @@ on boot
     write /proc/sys/kernel/sched_group_upmigrate 100
     write /proc/sys/kernel/sched_group_downmigrate 95
     write /proc/sys/kernel/sched_select_prev_cpu_us 0
-    write /proc/sys/kernel/sched_freq_inc_notify 400000
-    write /proc/sys/kernel/sched_freq_dec_notify 400000
+    write /proc/sys/kernel/sched_freq_inc_notify 77000
+    write /proc/sys/kernel/sched_freq_dec_notify 77000
     write /proc/sys/kernel/sched_spill_nr_run 5
     write /proc/sys/kernel/sched_restrict_cluster_spill 1
+    write /proc/sys/kernel/sched_prefer_sync_wakee_to_waker 1
 
     # Disable thermal
     write /sys/module/msm_thermal/core_control/enabled 0
@@ -137,22 +138,6 @@ on boot
     write /sys/module/lpm_levels/system/perf/perf-l2-dynret/idle_enabled N
     write /sys/module/lpm_levels/system/perf/perf-l2-ret/idle_enabled N
     write /sys/module/lpm_levels/parameters/sleep_disabled N
-
-    # Enable sched guided freq control
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_sched_load 1
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/use_migration_notif 1
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_sched_load 1
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/use_migration_notif 1
-    write /proc/sys/kernel/sched_freq_inc_notify 50000
-    write /proc/sys/kernel/sched_freq_dec_notify 50000
-
-    # disallow upmigrate for cgroup's tasks
-    write /dev/cpuctl/cpu.upmigrate_discourage 1
-
-    #enable sched colocation and colocation inheritance
-    write /proc/sys/kernel/sched_upmigrate 130
-    write /proc/sys/kernel/sched_downmigrate 110
-    write /proc/sys/kernel/sched_enable_thread_grouping 1
 
     # set cpu_boost parameters
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1324800"
