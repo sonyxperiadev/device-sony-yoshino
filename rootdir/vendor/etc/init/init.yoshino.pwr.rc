@@ -12,21 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-on init
-    # cpuquiet rqbalance permissions
-    chown system system /sys/devices/system/cpu/cpuquiet/nr_min_cpus
-    chown system system /sys/devices/system/cpu/cpuquiet/nr_power_max_cpus
-    chown system system /sys/devices/system/cpu/cpuquiet/nr_thermal_max_cpus
-    chown system system /sys/devices/system/cpu/cpuquiet/rqbalance/balance_level
-    chown system system /sys/devices/system/cpu/cpuquiet/rqbalance/nr_run_thresholds
-    chown system system /sys/devices/system/cpu/cpuquiet/rqbalance/nr_down_run_thresholds
-    chmod 0660 /sys/devices/system/cpu/cpuquiet/nr_min_cpus
-    chmod 0660 /sys/devices/system/cpu/cpuquiet/nr_power_max_cpus
-    chmod 0660 /sys/devices/system/cpu/cpuquiet/nr_thermal_max_cpus
-    chmod 0660 /sys/devices/system/cpu/cpuquiet/rqbalance/balance_level
-    chmod 0660 /sys/devices/system/cpu/cpuquiet/rqbalance/nr_run_thresholds
-    chmod 0660 /sys/devices/system/cpu/cpuquiet/rqbalance/nr_down_run_thresholds
-
 on charger
     # Disable thermal
     write /sys/module/msm_thermal/core_control/enabled 0
@@ -169,4 +154,3 @@ on property:sys.boot_completed=1
     write /sys/class/devfreq/soc:qcom,memlat-cpu4/mem_latency/ratio_ceil 400
 
     write /sys/class/devfreq/soc:qcom,mincpubw/governor "cpufreq"
-
