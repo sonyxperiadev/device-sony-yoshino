@@ -43,7 +43,7 @@ BOARD_RAMDISK_OFFSET     := 0x02000000
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
 #BOARD_KERNEL_CMDLINE += earlycon=msm_serial_dm,0xc1b0000 androidboot.console=msm_serial_dm,0xc1b0000
 
-TARGET_RECOVERY_FSTAB = $(PLATFORM_COMMON_PATH)/rootdir/vendor/etc/fstab.yoshino
+TARGET_RECOVERY_FSTAB ?= $(PLATFORM_COMMON_PATH)/rootdir/vendor/etc/fstab.yoshino
 
 TARGET_PD_SERVICE_ENABLED := true
 
