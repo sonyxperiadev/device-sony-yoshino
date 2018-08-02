@@ -152,6 +152,13 @@
 /sys/devices/soc/c1b5000.i2c/i2c-7/7-0028  recv_rsp    0600 nfc nfc
 /sys/devices/soc/c1b5000.i2c/i2c-7/7-0028  send_cmd    0200 nfc nfc
 
+# NFC - k4.9
+/sys/devices/platform/soc/c1b5000.i2c/i2c-7/7-0028  init_deinit 0200 nfc nfc
+/sys/devices/platform/soc/c1b5000.i2c/i2c-7/7-0028  set_pwr     0200 nfc nfc
+/sys/devices/platform/soc/c1b5000.i2c/i2c-7/7-0028  res_ready   0400 nfc nfc
+/sys/devices/platform/soc/c1b5000.i2c/i2c-7/7-0028  recv_rsp    0600 nfc nfc
+/sys/devices/platform/soc/c1b5000.i2c/i2c-7/7-0028  send_cmd    0200 nfc nfc
+
 # LED
 /sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d000/leds/led:* max_brightness 0664 system system
 /sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d000/leds/led:* brightness     0664 system system
@@ -162,6 +169,15 @@
 /sys/devices/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d800/leds/wled  brightness     0664 system system
 /sys/class/leds/lcd-backlight max_brightness                                                                                 0644 root system
 /sys/class/leds/lcd-backlight brightness                                                                                     0664 system system
+
+# LED - k4.9
+/sys/devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d000/leds/led:* max_brightness 0664 system system
+/sys/devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d000/leds/led:* brightness     0664 system system
+/sys/devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d000/leds/led:* blink          0664 system system
+/sys/devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d000/leds/led:* duty_pcts      0664 system system
+/sys/devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d000/leds/rgb   rgb_blink      0664 system system
+/sys/devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d800/leds/wled  max_brightness 0664 system system
+/sys/devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d800/leds/wled  brightness     0664 system system
 
 # Fingerprint sensor  device
 /dev/fingerprint         0664 system input
