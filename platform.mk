@@ -97,7 +97,7 @@ PRODUCT_PACKAGES += \
 
 # QCOM Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    qcom.bluetooth.soc=cherokee
+    vendor.qcom.bluetooth.soc=cherokee
 
 # Fluence
 PRODUCT_PROPERTY_OVERRIDES += \
