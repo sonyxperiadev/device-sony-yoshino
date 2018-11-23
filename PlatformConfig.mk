@@ -78,5 +78,6 @@ BOARD_SEPOLICY_DIRS += $(PLATFORM_COMMON_PATH)/sepolicy_platform
 
 # Display
 TARGET_HAS_HDR_DISPLAY := true
+TARGET_USES_GRALLOC1 := true
 
 include device/sony/common/CommonConfig.mk
