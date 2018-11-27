@@ -96,6 +96,9 @@ PRODUCT_PACKAGES += \
     camera.msm8998
 
 # QCOM Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl-qti
+
 PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=cherokee
 
