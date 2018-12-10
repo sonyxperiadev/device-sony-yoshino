@@ -32,5 +32,11 @@ genfscon sysfs /devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.q
 genfscon sysfs /devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,leds@d800/leds    u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pmi8998@3:qcom,haptics@c000/leds u:object_r:sysfs_leds:s0
 
+genfscon sysfs /devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-00/800f000.qcom,spmi:qcom,pm8998@0:qcom,pm8998_rtc/rtc/rtc0/date                u:object_r:sysfs_rtc:s0
+genfscon sysfs /devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-00/800f000.qcom,spmi:qcom,pm8998@0:qcom,pm8998_rtc/rtc/rtc0/htctosys            u:object_r:sysfs_rtc:s0
+genfscon sysfs /devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-00/800f000.qcom,spmi:qcom,pm8998@0:qcom,pm8998_rtc/rtc/rtc0/max_user_freq       u:object_r:sysfs_rtc:s0
+genfscon sysfs /devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-00/800f000.qcom,spmi:qcom,pm8998@0:qcom,pm8998_rtc/rtc/rtc0/since_epoch         u:object_r:sysfs_rtc:s0
+genfscon sysfs /devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-00/800f000.qcom,spmi:qcom,pm8998@0:qcom,pm8998_rtc/rtc/rtc0/time                u:object_r:sysfs_rtc:s0
+
 genfscon sysfs /devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qpnp,fg/power_supply                  u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-02/800f000.qcom,spmi:qcom,pmi8998@2:qcom,qpnp-smb2/power_supply           u:object_r:sysfs_batteryinfo:s0
