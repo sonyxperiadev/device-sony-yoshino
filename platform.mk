@@ -162,10 +162,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.wifi.addr_path=/data/vendor/wifi/wlan_mac.bin
 
-# Force camera API
-PRODUCT_PROPERTY_OVERRIDES += \
-    camera2.portability.force_api=2
-
 # setup dm-verity configs.
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/1da4000.ufshc/by-name/system
 $(call inherit-product, build/target/product/verity.mk)
