@@ -1,5 +1,3 @@
-genfscon sysfs /bus/esoc/devices                                                 u:object_r:sysfs_msm_subsys:s0
-
 genfscon sysfs /devices/platform/soc/c179000.i2c                                 u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/platform/soc/c17a000.i2c                                 u:object_r:sysfs_msm_subsys:s0
 genfscon sysfs /devices/platform/soc/c1b5000.i2c                                 u:object_r:sysfs_msm_subsys:s0
