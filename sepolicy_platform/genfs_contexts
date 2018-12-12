@@ -18,6 +18,8 @@ genfscon sysfs /devices/platform/soc/ca1c000.qcom,jpeg                          
 genfscon sysfs /devices/platform/soc/caa0000.qcom,jpeg                           u:object_r:sysfs_camera:s0
 genfscon sysfs /devices/platform/soc/8c0000.qcom,msm-cam                         u:object_r:sysfs_camera:s0
 
+genfscon sysfs /devices/platform/soc/18800000.qcom,icnss/net                     u:object_r:sysfs_net:s0
+
 genfscon sysfs /devices/platform/soc/1da4000.ufshc/clkscale_enable               u:object_r:sysfs_clkscale:s0
 genfscon sysfs /devices/platform/soc/c900000.qcom,mdss_mdp/caps                  u:object_r:sysfs_mdss_mdp_caps:s0
 genfscon sysfs /devices/platform/soc/a1800000.qcom,rmtfs_rtel_sharedmem          u:object_r:sysfs_rmtfs:s0
