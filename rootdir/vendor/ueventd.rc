@@ -17,6 +17,9 @@
 /dev/rmnet_ctrl           0660   usb        usb
 /dev/dpl_ctrl             0660   usb        usb
 
+# the DIAG device node is not world writable/readable.
+/dev/diag                 0660   system     diag
+
 #permissions for CSVT
 /dev/smd11                0660   radio      radio
 

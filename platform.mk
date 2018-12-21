@@ -98,7 +98,8 @@ PRODUCT_PACKAGES += \
 
 # QCOM Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0-impl-qti
+    android.hardware.bluetooth@1.0-impl-qti \
+    android.hardware.bluetooth@1.0-service-qti
 
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=cherokee
