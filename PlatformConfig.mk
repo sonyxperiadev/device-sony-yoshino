@@ -84,5 +84,6 @@ TARGET_USES_CASH_EXTENSION := true
 TARGET_HAS_HDR_DISPLAY := true
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_SDE := true
+TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 
 include device/sony/common/CommonConfig.mk
