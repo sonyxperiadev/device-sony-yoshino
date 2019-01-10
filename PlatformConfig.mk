@@ -83,5 +83,6 @@ TARGET_USES_CASH_EXTENSION := true
 # Display
 TARGET_HAS_HDR_DISPLAY := true
 TARGET_USES_GRALLOC1 := true
+TARGET_USES_SDE := true
 
 include device/sony/common/CommonConfig.mk
