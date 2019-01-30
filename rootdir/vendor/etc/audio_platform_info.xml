@@ -35,6 +35,7 @@
         <device name="SND_DEVICE_OUT_VOICE_HANDSET" acdb_id="7"/>
         <device name="SND_DEVICE_OUT_VOICE_HEADPHONES" acdb_id="10"/>
         <device name="SND_DEVICE_OUT_VOICE_LINE" acdb_id="47"/>
+        <device name="SND_DEVICE_OUT_BT_SCO_WB" acdb_id="-1"/>
         <device name="SND_DEVICE_IN_CAMCORDER_MIC" acdb_id="544"/>
         <device name="SND_DEVICE_IN_HANDSET_MIC" acdb_id="6"/>
         <device name="SND_DEVICE_IN_HANDSET_DMIC" acdb_id="4"/>
