@@ -101,6 +101,12 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.bluetooth@1.0-service-qti
 
+# Camera Augmented Sensing Helper
+PRODUCT_PACKAGES += \
+   libpolyreg \
+   cashsvr \
+   libcashctl
+
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=cherokee
 
