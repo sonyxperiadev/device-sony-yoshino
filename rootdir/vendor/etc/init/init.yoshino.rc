@@ -12,6 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+on init
+    # Boot time fs tune
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sda/queue/scheduler cfq
+    write /sys/block/sda/queue/iosched/slice_idle 0
+    write /sys/block/sda/queue/read_ahead_kb 2048
+    write /sys/block/sda/queue/nr_requests 256
+    write /sys/block/sdb/queue/iostats 0
+    write /sys/block/sdb/queue/scheduler cfq
+    write /sys/block/sdb/queue/iosched/slice_idle 0
+    write /sys/block/sdb/queue/read_ahead_kb 2048
+    write /sys/block/sdb/queue/nr_requests 256
+    write /sys/block/dm-0/queue/read_ahead_kb 2048
+    write /sys/block/dm-1/queue/read_ahead_kb 2048
+
 on boot
     # WLAN MAC
     chown wifi wifi /sys/module/wlan/parameters/fwpath
@@ -27,3 +42,14 @@ on boot
     # CPU is isolated/hotplugged, the IRQ affinity is adjusted
     # to one of the CPU from the default IRQ affinity mask.
     write /proc/irq/default_smp_affinity f
+
+on property:sys.boot_completed=1
+    # Runtime fs tuning for runtime performance
+    write /sys/block/sda/queue/read_ahead_kb 128
+    write /sys/block/sda/queue/nr_requests 128
+    write /sys/block/sda/queue/iostats 1
+    write /sys/block/sdb/queue/read_ahead_kb 128
+    write /sys/block/sdb/queue/nr_requests 128
+    write /sys/block/sdb/queue/iostats 1
+    write /sys/block/dm-0/queue/read_ahead_kb 128
+    write /sys/block/dm-1/queue/read_ahead_kb 128
