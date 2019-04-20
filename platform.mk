@@ -169,9 +169,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.usb.controller=a800000.dwc3 \
     sys.usb.rndis.func.name=gsi
 
-#WiFi MAC address path
+# WiFi MAC address path
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.wifi.addr_path=/data/vendor/wifi/wlan_mac.bin
+
+# Avoid Adoptable double encryption
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.crypto.allow_encrypt_override=true
 
 # setup dm-verity configs.
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/1da4000.ufshc/by-name/system
