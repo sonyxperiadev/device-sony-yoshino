@@ -79,6 +79,7 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    sound_trigger.primary.msm8998 \
     audio.primary.msm8998
 
 # GFX
