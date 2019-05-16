@@ -18,4 +18,4 @@
 
 /devices/platform/soc/c0a4900.sdhci/mmc_host/mmc*                       auto         auto    nosuid,nodev                     voldmanaged=sdcard1:auto,encryptable=userdata
 /devices/platform/soc/a800000.ssusb/a800000.dwc3/xhci-hcd.0.auto/usb*   auto         auto    defaults                         voldmanaged=usb:auto
-/dev/block/zram0                            none        swap    defaults                                                      zramsize=536870912,notrim
+/dev/block/zram0                            none        swap    defaults                                                      zramsize=1073741824,max_comp_streams=8
