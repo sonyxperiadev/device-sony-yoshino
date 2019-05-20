@@ -20,6 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 SOMC_PLATFORM := yoshino
 SOMC_KERNEL_VERSION := 4.9
+KERNEL_PATH := kernel/sony/msm-$(SOMC_KERNEL_VERSION)
 
 SONY_ROOT := $(PLATFORM_COMMON_PATH)/rootdir
 
