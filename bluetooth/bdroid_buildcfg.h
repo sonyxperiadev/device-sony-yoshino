@@ -18,6 +18,12 @@
 #define _BDROID_BUILDCFG_H
 
 #if !defined(OS_GENERIC)
+#ifdef PROPERTY_VALUE_MAX
+#define PVAL_MAX_ALREADY_DEFINED
+#ifndef __CUTILS_PROPERTIES_H
+#undef PROPERTY_VALUE_MAX
+#endif
+#endif
 #include <cutils/properties.h>
 #include <string.h>
 
@@ -42,9 +48,12 @@ static inline const char* getBTDefaultName()
 }
 
 #define BTM_DEF_LOCAL_NAME getBTDefaultName()
-#endif // OS_GENERIC
 
+#ifndef PVAL_MAX_ALREADY_DEFINED
 #undef PROPERTY_VALUE_MAX
+#endif
+
+#endif // OS_GENERIC
 
 // Wide-band speech support
 #define BTM_WBS_INCLUDED TRUE
