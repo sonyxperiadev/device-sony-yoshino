@@ -16,7 +16,7 @@
 PLATFORM_COMMON_PATH := device/sony/yoshino
 
 SOMC_PLATFORM := yoshino
-SOMC_KERNEL_VERSION := 4.9
+SOMC_KERNEL_VERSION := 4.14
 KERNEL_PATH := kernel/sony/msm-$(SOMC_KERNEL_VERSION)
 
 $(call inherit-product, device/sony/common/common.mk)
