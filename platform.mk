@@ -98,6 +98,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gps.msm8998
 
+# Sensors
+PRODUCT_PACKAGES += \
+    sensors_settings \
+    hals.conf
+
 # CAMERA
 PRODUCT_PACKAGES += \
     camera.msm8998
