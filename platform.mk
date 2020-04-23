@@ -170,6 +170,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qti.sensors.als_scale=1000 \
     ro.qfusion_use_report_period=false
 
+# SurfaceFlinger
+# Keep in sync with NUM_FRAMEBUFFER_SURFACE_BUFFERS
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=2
+
 # Display HACK: Use GPU composition only
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.primary_mixer_stages=1
