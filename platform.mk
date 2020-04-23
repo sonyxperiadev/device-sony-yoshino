@@ -38,7 +38,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/audio_tuning_mixer_tasha.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer_tasha.txt \
     $(SONY_ROOT)/vendor/etc/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
-    $(SONY_ROOT)/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml
+    $(SONY_ROOT)/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    $(SONY_ROOT)/vendor/etc/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -187,6 +188,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #WiFi MAC address path
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.wifi.addr_path=/data/vendor/wifi/wlan_mac.bin
+
+# Enable AAudio MMAP/NOIRQ data path.
+# 2 is AAUDIO_POLICY_AUTO so it will try MMAP then fallback to Legacy path.
+PRODUCT_PROPERTY_OVERRIDES += aaudio.mmap_policy=2
+# Allow EXCLUSIVE then fall back to SHARED.
+PRODUCT_PROPERTY_OVERRIDES += aaudio.mmap_exclusive_policy=2
 
 # setup dm-verity configs.
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/1da4000.ufshc/by-name/system
