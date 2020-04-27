@@ -48,17 +48,14 @@
             <xi:include href="common_primary_audio_policy_configuration.xml" xpointer="xpointer(/module/*)" />
         </module>
 
-        <!-- A2dp Input Audio HAL -->
-        <xi:include href="a2dp_in_audio_policy_configuration.xml" />
+        <!-- A2dp Audio HAL -->
+        <xi:include href="a2dp_audio_policy_configuration.xml" />
 
         <!-- Usb Audio HAL -->
         <xi:include href="usb_audio_policy_configuration.xml" />
 
         <!-- Remote Submix Audio HAL -->
         <xi:include href="r_submix_audio_policy_configuration.xml" />
-
-        <!-- Bluetooth Audio HAL -->
-        <xi:include href="bluetooth_audio_policy_configuration.xml" />
 
     </modules>
     <!-- End of Modules section -->
