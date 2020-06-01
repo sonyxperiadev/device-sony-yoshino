@@ -1,3 +1,5 @@
+firmware_directories /vendor/firmware_mnt/image/
+
 /dev/genlock              0666   system     system
 /dev/wlan                 0660   wifi       wifi
 /dev/kgsl-3d0             0666   system     system
