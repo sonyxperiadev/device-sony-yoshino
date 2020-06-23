@@ -49,7 +49,8 @@ PRODUCT_COPY_FILES += \
 else
 PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/caf_primary_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/caf_primary_audio_policy_configuration.xml \
-    $(SONY_ROOT)/vendor/etc/caf_routes_primary_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/routes_primary_audio_policy_configuration.xml
+    $(SONY_ROOT)/vendor/etc/caf_routes_primary_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/routes_primary_audio_policy_configuration.xml \
+    $(SONY_ROOT)/vendor/etc/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf
 endif
 
 # Media
