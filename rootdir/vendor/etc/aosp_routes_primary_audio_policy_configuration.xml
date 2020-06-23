@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This file contains audio routes used by the AOSP Audio HAL
+     for Qualcomm SoCs. -->
+<module>
+    <!-- route declaration, i.e. list all available sources for a given sink -->
+    <routes>
+        <route type="mix" sink="Earpiece"
+               sources="primary output,raw,deep_buffer"/>
+        <route type="mix" sink="Speaker"
+               sources="primary output,raw,deep_buffer,compressed_offload"/>
+        <route type="mix" sink="Wired Headset"
+               sources="primary output,raw,deep_buffer,compressed_offload"/>
+        <route type="mix" sink="Wired Headphones"
+               sources="primary output,raw,deep_buffer,compressed_offload"/>
+        <route type="mix" sink="Line Out"
+               sources="primary output,raw,deep_buffer,compressed_offload"/>
+        <route type="mix" sink="BT SCO"
+               sources="primary output,raw,deep_buffer"/>
+        <route type="mix" sink="BT SCO Headset"
+               sources="primary output,raw,deep_buffer"/>
+        <route type="mix" sink="BT SCO Car Kit"
+               sources="primary output,raw,deep_buffer"/>
+        <route type="mix" sink="Telephony Tx"
+               sources="voice_tx"/>
+        <route type="mix" sink="primary input"
+               sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic"/>
+        <route type="mix" sink="fast input"
+               sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic"/>
+        <route type="mix" sink="voice_rx"
+               sources="Telephony Rx"/>
+    </routes>
+</module>

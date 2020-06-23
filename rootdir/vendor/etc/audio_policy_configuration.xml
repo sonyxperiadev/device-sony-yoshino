@@ -46,6 +46,11 @@
         <!-- Primary Audio HAL -->
         <module name="primary" halVersion="2.0">
             <xi:include href="common_primary_audio_policy_configuration.xml" xpointer="xpointer(/module/*)" />
+            <xi:include href="caf_primary_audio_policy_configuration.xml" xpointer="xpointer(/module/*)">
+                <!-- Fall back to .. nothing: if this file doesn't exist we are not extending the AOSP policy. -->
+                <xi:fallback />
+            </xi:include>
+            <xi:include href="routes_primary_audio_policy_configuration.xml" xpointer="xpointer(/module/*)" />
         </module>
 
         <!-- A2dp Input Audio HAL -->

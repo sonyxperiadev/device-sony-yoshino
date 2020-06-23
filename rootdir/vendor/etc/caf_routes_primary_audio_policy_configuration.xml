@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This file contains audio routes used by the AOSP Audio HAL
+     for Qualcomm SoCs.
+-->
+<module>
+    <!-- route declaration, i.e. list all available sources for a given sink -->
+    <routes>
+        <route type="mix" sink="Earpiece"
+               sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out"/>
+        <route type="mix" sink="Speaker"
+               sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out"/>
+        <route type="mix" sink="Wired Headset"
+               sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,dsd_compress_passthrough,voip_rx,mmap_no_irq_out"/>
+        <route type="mix" sink="Wired Headphones"
+               sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,dsd_compress_passthrough,voip_rx,mmap_no_irq_out"/>
+        <route type="mix" sink="Line"
+               sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,dsd_compress_passthrough,voip_rx,mmap_no_irq_out"/>
+        <route type="mix" sink="HDMI"
+               sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload"/>
+        <route type="mix" sink="Proxy"
+               sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload"/>
+        <route type="mix" sink="BT SCO"
+               sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
+        <route type="mix" sink="BT SCO Headset"
+               sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
+        <route type="mix" sink="BT SCO Car Kit"
+               sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
+        <route type="mix" sink="USB Device Out"
+               sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,hifi_playback"/>
+        <route type="mix" sink="USB Headset Out"
+               sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,hifi_playback"/>
+        <route type="mix" sink="Telephony Tx"
+               sources="voice_tx,incall_music_uplink"/>
+        <route type="mix" sink="voice_rx"
+               sources="Telephony Rx"/>
+        <route type="mix" sink="primary input"
+               sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,FM Tuner,USB Device In,USB Headset In,Telephony Rx"/>
+        <route type="mix" sink="voip_tx"
+               sources="Built-In Mic,Built-In Back Mic,BT SCO Headset Mic,USB Device In,USB Headset In"/>
+        <route type="mix" sink="usb_surround_sound"
+               sources="USB Device In,USB Headset In"/>
+        <route type="mix" sink="record_24"
+               sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic"/>
+        <route type="mix" sink="mmap_no_irq_in"
+               sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,USB Device In,USB Headset In"/>
+        <route type="mix" sink="BT A2DP Out"
+               sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
+        <route type="mix" sink="BT A2DP Headphones"
+               sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
+        <route type="mix" sink="BT A2DP Speaker"
+               sources="primary output,deep_buffer,direct_pcm,compressed_offload,voip_rx"/>
+        <route type="mix" sink="hifi_input" sources="USB Device In,USB Headset In" />
+    </routes>
+</module>
