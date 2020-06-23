@@ -13,7 +13,7 @@
                sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,dsd_compress_passthrough,voip_rx,mmap_no_irq_out"/>
         <route type="mix" sink="Wired Headphones"
                sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,dsd_compress_passthrough,voip_rx,mmap_no_irq_out"/>
-        <route type="mix" sink="Line"
+        <route type="mix" sink="Line Out"
                sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,dsd_compress_passthrough,voip_rx,mmap_no_irq_out"/>
         <route type="mix" sink="HDMI"
                sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload"/>
