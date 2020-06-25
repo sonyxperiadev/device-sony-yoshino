@@ -40,7 +40,18 @@ PRODUCT_COPY_FILES += \
     $(SONY_ROOT)/vendor/etc/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(SONY_ROOT)/vendor/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(SONY_ROOT)/vendor/etc/audio_policy_configuration_bluetooth_legacy_hal.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration_bluetooth_legacy_hal.xml \
-    $(SONY_ROOT)/vendor/etc/common_primary_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/common_primary_audio_policy_configuration.xml
+    $(SONY_ROOT)/vendor/etc/common_primary_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/common_primary_audio_policy_configuration.xml \
+
+# Audio - Routes variations and extensions between AOSP and CodeAurora Audio HAL features
+ifeq ($(TARGET_USES_AOSP_AUDIO_HAL),true)
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/vendor/etc/aosp_routes_primary_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/routes_primary_audio_policy_configuration.xml
+else
+PRODUCT_COPY_FILES += \
+    $(SONY_ROOT)/vendor/etc/caf_primary_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/caf_primary_audio_policy_configuration.xml \
+    $(SONY_ROOT)/vendor/etc/caf_routes_primary_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/routes_primary_audio_policy_configuration.xml \
+    $(SONY_ROOT)/vendor/etc/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf
+endif
 
 # Media
 PRODUCT_COPY_FILES += \
