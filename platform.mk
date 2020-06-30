@@ -201,6 +201,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.wifi.addr_path=/data/vendor/wifi/wlan_mac.bin
 
+# Audio - QCOM HAL
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.audio.offload.buffer.size.kb=32
+
 # setup dm-verity configs.
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/1da4000.ufshc/by-name/system
 $(call inherit-product, build/target/product/verity.mk)
