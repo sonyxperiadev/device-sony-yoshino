@@ -202,6 +202,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Audio - QCOM HAL
 PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.audio.feature.compr_voip.enable=true \
     vendor.audio.offload.buffer.size.kb=32
 
 # setup dm-verity configs.
