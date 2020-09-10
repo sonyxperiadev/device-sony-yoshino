@@ -18,10 +18,62 @@ PLATFORM_COMMON_PATH := device/sony/yoshino
 SOMC_PLATFORM := yoshino
 SOMC_KERNEL_VERSION := 4.14
 
-$(call inherit-product, device/sony/common/common.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+PRODUCT_PLATFORM_SOD := true
+
+TARGET_BOARD_PLATFORM := msm8998
 
 SONY_ROOT := $(PLATFORM_COMMON_PATH)/rootdir
+
+TARGET_PD_SERVICE_ENABLED := true
+
+# Wi-Fi definitions for Qualcomm solution
+WIFI_DRIVER_BUILT := qca_cld3
+WIFI_DRIVER_DEFAULT := qca_cld3
+BOARD_HAS_QCOM_WLAN := true
+BOARD_HOSTAPD_DRIVER := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_qcwcn
+BOARD_WLAN_DEVICE := qcwcn
+BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
+HOSTAPD_VERSION := VER_0_8_X
+WIFI_DRIVER_FW_PATH_AP  := "ap"
+WIFI_DRIVER_FW_PATH_P2P := "p2p"
+WIFI_DRIVER_FW_PATH_STA := "sta"
+WPA_SUPPLICANT_VERSION := VER_0_8_X
+TARGET_USES_ICNSS_QMI := true
+WIFI_DRIVER_STATE_CTRL_PARAM := "/sys/kernel/boot_wlan/boot_wlan"
+WIFI_DRIVER_STATE_OFF := 0
+WIFI_DRIVER_STATE_ON := 1
+
+# BT definitions for Qualcomm solution
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_QCOM := true
+TARGET_USE_QTI_BT_STACK := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_COMMON_PATH)/bluetooth
+WCNSS_FILTER_USES_SIBS := true
+
+# TAD
+TARGET_USES_TAD_V2 := true
+
+# RIL
+TARGET_PER_MGR_ENABLED := true
+
+# NFC
+NXP_CHIP_FW_TYPE := PN553
+
+# Audio
+BOARD_SUPPORTS_SOUND_TRIGGER := true
+
+# CASH
+TARGET_USES_CASH_EXTENSION := true
+
+# Display
+TARGET_HAS_HDR_DISPLAY := true
+TARGET_USES_GRALLOC1 := true
+TARGET_USES_SDE := true
+TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
+TARGET_USES_DRM_PP := true
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 2
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -207,5 +259,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # setup dm-verity configs.
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/1da4000.ufshc/by-name/system
+$(call inherit-product, device/sony/common/common.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, build/target/product/verity.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
