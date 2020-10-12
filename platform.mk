@@ -79,6 +79,9 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS := 2
 DEVICE_PACKAGE_OVERLAYS += \
     $(PLATFORM_COMMON_PATH)/overlay
 
+# Graphics allocator/mapper v3
+TARGET_HARDWARE_GRAPHICS_V3 := true
+
 # Device Specific Permissions
 PRODUCT_COPY_FILES += \
      frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.gyroscope.xml \
