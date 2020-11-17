@@ -6,7 +6,7 @@ This is the Android device configuration for yoshino platform.
 yoshino devices:
 
     Xperia XZ Premium ................ Maple
-    XPeria XZ1 ....................... Poplar
+    Xperia XZ1 ....................... Poplar
     Xperia XZ1 Compact ............... Lilac
 
 Build instructions
