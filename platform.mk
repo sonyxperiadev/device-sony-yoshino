@@ -183,6 +183,10 @@ PRODUCT_PACKAGES += \
    libpolyreg \
    cashsvr \
    libcashctl
+   
+# vndservicemanager
+PRODUCT_PACKAGES += 
+	vndservicemanager
 
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=cherokee
