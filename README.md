@@ -1,13 +1,18 @@
+Yoshino platform
+================
 Copyright (C) Sony Mobile Communications 2017
-=============================================
+---------------------------------------------
 
-This is the Android device configuration for yoshino platform.
+Android device configuration for the yoshino platform (**MSM8998**).
 
-yoshino devices:
+### Supported devices
 
-    Xperia XZ Premium ................ Maple
-    Xperia XZ1 ....................... Poplar
-    Xperia XZ1 Compact ............... Lilac
+| Device | Codename |
+|-|:-:|
+| Xperia XZ Premium | [maple](https://github.com/sonyxperiadev/device-sony-maple) |
+| Xperia XZ1 | [poplar](https://github.com/sonyxperiadev/device-sony-poplar) |
+| Xperia XZ1 Compact | [lilac](https://github.com/sonyxperiadev/device-sony-lilac) |
 
-Build instructions
+### Build instructions
+
 https://developer.sony.com/develop/open-devices/guides/aosp-build-instructions/
