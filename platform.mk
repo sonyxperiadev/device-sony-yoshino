@@ -259,6 +259,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.compr_voip.enable=true \
     vendor.audio.offload.buffer.size.kb=32
 
+# IWLAN
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.iwlan_operation_mode=legacy
+
 # setup dm-verity configs.
 PRODUCT_SYSTEM_VERITY_PARTITION := /dev/block/platform/soc/1da4000.ufshc/by-name/system
 $(call inherit-product, device/sony/common/common.mk)
