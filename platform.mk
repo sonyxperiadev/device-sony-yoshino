@@ -184,6 +184,10 @@ PRODUCT_PACKAGES += \
    libcashctl
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.qcom.bluetooth.soc=cherokee
+
+# Legacy BT property (will be removed in S)
+PRODUCT_PROPERTY_OVERRIDES += \
     vendor.qcom.bluetooth.soc=cherokee
 
 # Fluence
