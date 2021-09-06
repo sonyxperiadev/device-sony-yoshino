@@ -77,6 +77,9 @@ TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TARGET_USES_DRM_PP := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 2
 
+# Sscrpcd
+TARGET_NEEDS_SSCRPCD := true
+
 # Force building a boot image.
 # This needs to be set explicitly since Android R
 PRODUCT_BUILD_BOOT_IMAGE := true
