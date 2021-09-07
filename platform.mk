@@ -54,9 +54,6 @@ TARGET_USE_QTI_BT_STACK := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(PLATFORM_COMMON_PATH)/bluetooth
 WCNSS_FILTER_USES_SIBS := true
 
-# TAD
-TARGET_USES_TAD_V2 := true
-
 # RIL
 TARGET_PER_MGR_ENABLED := true
 
@@ -147,6 +144,7 @@ PRODUCT_COPY_FILES += \
 
 # Platform specific init
 PRODUCT_PACKAGES += \
+    tad_legacy.rc \
     init.yoshino \
     init.yoshino.pwr \
     ueventd
