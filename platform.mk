@@ -167,6 +167,11 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl:64 \
+    android.hardware.sensors@1.0-service
+
+PRODUCT_PACKAGES += \
+    sensors_leg.ssc \
     sensors_settings \
     hals.conf
 
